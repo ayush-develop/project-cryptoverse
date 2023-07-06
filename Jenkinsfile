@@ -5,24 +5,24 @@ pipeline {
     stage('Build') {
       steps {
         // Install dependencies
-        sh 'npm install'
+        bat 'npm install'
 
         // Build React app
-        sh 'npm run build'
+        bat 'npm run build'
       }
     }
 
     stage('Test') {
       steps {
         // Run tests
-        sh 'npm run test'
+        bat 'npm run test'
       }
     }
 
     stage('Deploy') {
       steps {
         // Deploy to production server
-        sh 'npm run deploy'
+        bat 'npm run deploy'
       }
     }
   }
